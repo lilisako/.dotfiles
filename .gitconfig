@@ -1,0 +1,52 @@
+[user]
+	name = lilisako
+    email = 33516104+lilisako@users.noreply.github.com 
+
+[color]
+	ui = auto
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+	autocrlf = input
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    di = diff HEAD
+    br = branch
+    hi = log --oneline --decorate --graph --all
+    ls = ls-files
+    uc = ls-files    # under control
+    oc = ls-files -o # out of control
+    ca = !git now && git reset --hard HEAD~ # cancel
+    dt = difftool
+    mt = mergetool
+    now = commit -m '' -a --allow-empty-message
+
+# from: http://iyukki.blog56.fc2.com/blog-entry-119.html
+# ll = !git ls-files -cdmokt|perl -pe 's/\\/.*/\\//'|grep -v '/'
+# ls = !git ls-files -t|perl -pe 's/\\/.*/\\//'|uniq -c
+# la = ls-files -cdmokt
+# his= log --oneline --decorate --graph --all
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+    keepBackup = false
+
+[mergetool]
+	keepBackup = false
+
+[push]
+	default = matching
+
+[tig "bind"]
+    generic = g move-first-line
+    generic = G move-last-line
+
+[fetch]
+	prune = true
